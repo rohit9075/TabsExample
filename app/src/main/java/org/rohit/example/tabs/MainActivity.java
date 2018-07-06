@@ -2,32 +2,16 @@ package org.rohit.example.tabs;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import org.rohit.example.R;
 
+
 public class MainActivity extends AppCompatActivity {
 
-    private final String LOG_TAG = MainActivity.class.getSimpleName();
 
-    // Titles of the individual pages (displayed in tabs)
-    private final String[] PAGE_TITLES = new String[] {
-            "Page 1",
-            "Page 2",
-            "Page 3"
-    };
-
-    // The fragments that are used as the individual pages
-    private final Fragment[] PAGES = new Fragment[] {
-            new Page1Fragment(),
-            new Page2Fragment(),
-            new Page3Fragment()
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,27 +35,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /* PagerAdapter for supplying the ViewPager with the pages (fragments) to display. */
-    public class MyPagerAdapter extends FragmentPagerAdapter {
-
-        public MyPagerAdapter(FragmentManager fragmentManager) {
-            super(fragmentManager);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return PAGES[position];
-        }
-
-        @Override
-        public int getCount() {
-            return PAGES.length;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return PAGE_TITLES[position];
-        }
-
-    }
 }
