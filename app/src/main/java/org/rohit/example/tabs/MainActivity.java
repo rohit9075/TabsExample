@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the Toolbar as the activity's app bar (instead of the default ActionBar)
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Demo Pager Fragment");
         setSupportActionBar(toolbar);
 
         // Connect the ViewPager to our custom PagerAdapter. The PagerAdapter supplies the pages

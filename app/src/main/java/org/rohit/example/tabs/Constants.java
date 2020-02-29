@@ -12,15 +12,17 @@ public class Constants {
 
     // Titles of the individual pages (displayed in tabs)
     public static final String[] PAGE_TITLES = new String[] {
-            "Page 1",
-            "Page 2",
-            "Page 3"
+            "Fragment 1",
+            "Fragment 2",
+            "Fragment 3",
+            "Fragment 4"
     };
 
     // The fragments that are used as the individual pages
     public static final Fragment[] PAGES = new Fragment[] {
             new Page1Fragment(),
             new Page2Fragment(),
-            new Page3Fragment()
+            new Page3Fragment(),
+            new BlankFragment()
     };
 }
